@@ -1,0 +1,20 @@
+{
+    "standard": "arc69",
+    "description": "deentrasaur",
+    "mime_type": "image/png",
+    "media_url": "ipfs://...",
+    "properties": {
+        "Background" : "",
+        "Billboard Sentence": "",
+        "Billboard": "",
+        "Eyes": "",
+        "Eye colour": "",
+        "Body": "",
+        "Cap": "",
+        "Hair": "",
+        "Mouth": "",
+        "Accessories": "",
+        "Tail Accessories": "",
+        "RedeemableAtICO": "true"
+    }
+}

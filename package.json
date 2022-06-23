@@ -1,0 +1,13 @@
+{
+  "name": "DinoMinter",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@algo-builder/algob": "^4.0.0",
+    "algosdk": "^1.17.0"
+  },
+  "devDependencies": {
+    "chai": "^4.3.6"
+  }
+}

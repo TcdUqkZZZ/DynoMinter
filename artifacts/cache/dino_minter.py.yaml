@@ -1,0 +1,1160 @@
+filename: dino_minter.py
+timestamp: 1655995761
+compiled: BiADAQAEJgYHbWFuYWdlcgxoYXNfZGlzY291bnQLd2hpdGVsaXN0ZWQJdW5jbGFpbWVkD3doaXRlbGlzdF9jb3VudAxtaW50ZWRfdW5pdHMxGCMSQAHvMRkiEkABuzEZJBJAAacxGYEFEkABkjYaAIANc2V0X3doaXRlbGlzdBJAAT02GgCAC3NldF9tYW5hZ2VyEkABADYaAIADYnV5EkAAfDYaAIAFY2xhaW0SQABlNhoAgA1naXZlX2Rpc2NvdW50EkAAJTYaAIAGcmVkZWVtEkAAAQAxAChkEjIEIhIQRDEANhoBiAHXIkMyBCISMR0iEhAxIDIDEjEJMgMSEDEVMgMSEBAxAChkEhBENhwBKSJmIkMxACtiiAGOIkMyBIECEkQzAQCIAbA1ADMBECISMwEAMwAAEhAzAQg0AA8QMwEHMgoSEDMBACpiEEQ3ABoBNwAaAogBGjMAACs0AWaIAQczAQg0ADIACA1AABUzAQApYiISQAACIkMzAQApI2ZC//UzAQAzAQg0AAkyAAmIAS1C/9kyBCISMR0iEhAxIDIDEjEJMgMSEDEVMgMSEBAxAChkEhBEKDYcAWciQzIEIhIxHSISEDEgMgMSMQkyAxIQMRUyAxIQEDEAKGQSEEQ2HAEqYiMSQAAINhwBKiJmIkMnBCcEZCIIZ0L/7TEAKGQSMgQiEhBEIkMxAChkEjIEIhIQRCJDMgQiEjEbIxIQMSAyAxIxCTIDEhAxFTIDEhAQRDEAKiNmMQApI2YxACsjZiJDMgQiEjEgMgMSMQkyAxIQMRUyAxIQEEQnBCNnKDEAZycFI2ciQycFJwVkIghniTUDNQKxgQOyECKyIiOyI4ADRFlOsiWABER5bm+yJiOyJChksik0ArInNAOyBTIAsgGztDw1AYk1BLEkshA0BLIRIrISMgqyEzEAshSJNQY1BbEishA0BrIIMgqyADQFsgcyALIBs4k1B4GQToHoBwmJ
+compiledHash: QDERNZEBIPBL3XHDEFXGUL4GCQR5IZ6WIUODZNTRQROO24T3RIL2GLLHJQ
+srcHash: 3015499400
+base64ToBytes:
+  - 6
+  - 32
+  - 3
+  - 1
+  - 0
+  - 4
+  - 38
+  - 6
+  - 7
+  - 109
+  - 97
+  - 110
+  - 97
+  - 103
+  - 101
+  - 114
+  - 12
+  - 104
+  - 97
+  - 115
+  - 95
+  - 100
+  - 105
+  - 115
+  - 99
+  - 111
+  - 117
+  - 110
+  - 116
+  - 11
+  - 119
+  - 104
+  - 105
+  - 116
+  - 101
+  - 108
+  - 105
+  - 115
+  - 116
+  - 101
+  - 100
+  - 9
+  - 117
+  - 110
+  - 99
+  - 108
+  - 97
+  - 105
+  - 109
+  - 101
+  - 100
+  - 15
+  - 119
+  - 104
+  - 105
+  - 116
+  - 101
+  - 108
+  - 105
+  - 115
+  - 116
+  - 95
+  - 99
+  - 111
+  - 117
+  - 110
+  - 116
+  - 12
+  - 109
+  - 105
+  - 110
+  - 116
+  - 101
+  - 100
+  - 95
+  - 117
+  - 110
+  - 105
+  - 116
+  - 115
+  - 49
+  - 24
+  - 35
+  - 18
+  - 64
+  - 1
+  - 239
+  - 49
+  - 25
+  - 34
+  - 18
+  - 64
+  - 1
+  - 187
+  - 49
+  - 25
+  - 36
+  - 18
+  - 64
+  - 1
+  - 167
+  - 49
+  - 25
+  - 129
+  - 5
+  - 18
+  - 64
+  - 1
+  - 146
+  - 54
+  - 26
+  - 0
+  - 128
+  - 13
+  - 115
+  - 101
+  - 116
+  - 95
+  - 119
+  - 104
+  - 105
+  - 116
+  - 101
+  - 108
+  - 105
+  - 115
+  - 116
+  - 18
+  - 64
+  - 1
+  - 61
+  - 54
+  - 26
+  - 0
+  - 128
+  - 11
+  - 115
+  - 101
+  - 116
+  - 95
+  - 109
+  - 97
+  - 110
+  - 97
+  - 103
+  - 101
+  - 114
+  - 18
+  - 64
+  - 1
+  - 0
+  - 54
+  - 26
+  - 0
+  - 128
+  - 3
+  - 98
+  - 117
+  - 121
+  - 18
+  - 64
+  - 0
+  - 124
+  - 54
+  - 26
+  - 0
+  - 128
+  - 5
+  - 99
+  - 108
+  - 97
+  - 105
+  - 109
+  - 18
+  - 64
+  - 0
+  - 101
+  - 54
+  - 26
+  - 0
+  - 128
+  - 13
+  - 103
+  - 105
+  - 118
+  - 101
+  - 95
+  - 100
+  - 105
+  - 115
+  - 99
+  - 111
+  - 117
+  - 110
+  - 116
+  - 18
+  - 64
+  - 0
+  - 37
+  - 54
+  - 26
+  - 0
+  - 128
+  - 6
+  - 114
+  - 101
+  - 100
+  - 101
+  - 101
+  - 109
+  - 18
+  - 64
+  - 0
+  - 1
+  - 0
+  - 49
+  - 0
+  - 40
+  - 100
+  - 18
+  - 50
+  - 4
+  - 34
+  - 18
+  - 16
+  - 68
+  - 49
+  - 0
+  - 54
+  - 26
+  - 1
+  - 136
+  - 1
+  - 215
+  - 34
+  - 67
+  - 50
+  - 4
+  - 34
+  - 18
+  - 49
+  - 29
+  - 34
+  - 18
+  - 16
+  - 49
+  - 32
+  - 50
+  - 3
+  - 18
+  - 49
+  - 9
+  - 50
+  - 3
+  - 18
+  - 16
+  - 49
+  - 21
+  - 50
+  - 3
+  - 18
+  - 16
+  - 16
+  - 49
+  - 0
+  - 40
+  - 100
+  - 18
+  - 16
+  - 68
+  - 54
+  - 28
+  - 1
+  - 41
+  - 34
+  - 102
+  - 34
+  - 67
+  - 49
+  - 0
+  - 43
+  - 98
+  - 136
+  - 1
+  - 142
+  - 34
+  - 67
+  - 50
+  - 4
+  - 129
+  - 2
+  - 18
+  - 68
+  - 51
+  - 1
+  - 0
+  - 136
+  - 1
+  - 176
+  - 53
+  - 0
+  - 51
+  - 1
+  - 16
+  - 34
+  - 18
+  - 51
+  - 1
+  - 0
+  - 51
+  - 0
+  - 0
+  - 18
+  - 16
+  - 51
+  - 1
+  - 8
+  - 52
+  - 0
+  - 15
+  - 16
+  - 51
+  - 1
+  - 7
+  - 50
+  - 10
+  - 18
+  - 16
+  - 51
+  - 1
+  - 0
+  - 42
+  - 98
+  - 16
+  - 68
+  - 55
+  - 0
+  - 26
+  - 1
+  - 55
+  - 0
+  - 26
+  - 2
+  - 136
+  - 1
+  - 26
+  - 51
+  - 0
+  - 0
+  - 43
+  - 52
+  - 1
+  - 102
+  - 136
+  - 1
+  - 7
+  - 51
+  - 1
+  - 8
+  - 52
+  - 0
+  - 50
+  - 0
+  - 8
+  - 13
+  - 64
+  - 0
+  - 21
+  - 51
+  - 1
+  - 0
+  - 41
+  - 98
+  - 34
+  - 18
+  - 64
+  - 0
+  - 2
+  - 34
+  - 67
+  - 51
+  - 1
+  - 0
+  - 41
+  - 35
+  - 102
+  - 66
+  - 255
+  - 245
+  - 51
+  - 1
+  - 0
+  - 51
+  - 1
+  - 8
+  - 52
+  - 0
+  - 9
+  - 50
+  - 0
+  - 9
+  - 136
+  - 1
+  - 45
+  - 66
+  - 255
+  - 217
+  - 50
+  - 4
+  - 34
+  - 18
+  - 49
+  - 29
+  - 34
+  - 18
+  - 16
+  - 49
+  - 32
+  - 50
+  - 3
+  - 18
+  - 49
+  - 9
+  - 50
+  - 3
+  - 18
+  - 16
+  - 49
+  - 21
+  - 50
+  - 3
+  - 18
+  - 16
+  - 16
+  - 49
+  - 0
+  - 40
+  - 100
+  - 18
+  - 16
+  - 68
+  - 40
+  - 54
+  - 28
+  - 1
+  - 103
+  - 34
+  - 67
+  - 50
+  - 4
+  - 34
+  - 18
+  - 49
+  - 29
+  - 34
+  - 18
+  - 16
+  - 49
+  - 32
+  - 50
+  - 3
+  - 18
+  - 49
+  - 9
+  - 50
+  - 3
+  - 18
+  - 16
+  - 49
+  - 21
+  - 50
+  - 3
+  - 18
+  - 16
+  - 16
+  - 49
+  - 0
+  - 40
+  - 100
+  - 18
+  - 16
+  - 68
+  - 54
+  - 28
+  - 1
+  - 42
+  - 98
+  - 35
+  - 18
+  - 64
+  - 0
+  - 8
+  - 54
+  - 28
+  - 1
+  - 42
+  - 34
+  - 102
+  - 34
+  - 67
+  - 39
+  - 4
+  - 39
+  - 4
+  - 100
+  - 34
+  - 8
+  - 103
+  - 66
+  - 255
+  - 237
+  - 49
+  - 0
+  - 40
+  - 100
+  - 18
+  - 50
+  - 4
+  - 34
+  - 18
+  - 16
+  - 68
+  - 34
+  - 67
+  - 49
+  - 0
+  - 40
+  - 100
+  - 18
+  - 50
+  - 4
+  - 34
+  - 18
+  - 16
+  - 68
+  - 34
+  - 67
+  - 50
+  - 4
+  - 34
+  - 18
+  - 49
+  - 27
+  - 35
+  - 18
+  - 16
+  - 49
+  - 32
+  - 50
+  - 3
+  - 18
+  - 49
+  - 9
+  - 50
+  - 3
+  - 18
+  - 16
+  - 49
+  - 21
+  - 50
+  - 3
+  - 18
+  - 16
+  - 16
+  - 68
+  - 49
+  - 0
+  - 42
+  - 35
+  - 102
+  - 49
+  - 0
+  - 41
+  - 35
+  - 102
+  - 49
+  - 0
+  - 43
+  - 35
+  - 102
+  - 34
+  - 67
+  - 50
+  - 4
+  - 34
+  - 18
+  - 49
+  - 32
+  - 50
+  - 3
+  - 18
+  - 49
+  - 9
+  - 50
+  - 3
+  - 18
+  - 16
+  - 49
+  - 21
+  - 50
+  - 3
+  - 18
+  - 16
+  - 16
+  - 68
+  - 39
+  - 4
+  - 35
+  - 103
+  - 40
+  - 49
+  - 0
+  - 103
+  - 39
+  - 5
+  - 35
+  - 103
+  - 34
+  - 67
+  - 39
+  - 5
+  - 39
+  - 5
+  - 100
+  - 34
+  - 8
+  - 103
+  - 137
+  - 53
+  - 3
+  - 53
+  - 2
+  - 177
+  - 129
+  - 3
+  - 178
+  - 16
+  - 34
+  - 178
+  - 34
+  - 35
+  - 178
+  - 35
+  - 128
+  - 3
+  - 68
+  - 89
+  - 78
+  - 178
+  - 37
+  - 128
+  - 4
+  - 68
+  - 121
+  - 110
+  - 111
+  - 178
+  - 38
+  - 35
+  - 178
+  - 36
+  - 40
+  - 100
+  - 178
+  - 41
+  - 52
+  - 2
+  - 178
+  - 39
+  - 52
+  - 3
+  - 178
+  - 5
+  - 50
+  - 0
+  - 178
+  - 1
+  - 179
+  - 180
+  - 60
+  - 53
+  - 1
+  - 137
+  - 53
+  - 4
+  - 177
+  - 36
+  - 178
+  - 16
+  - 52
+  - 4
+  - 178
+  - 17
+  - 34
+  - 178
+  - 18
+  - 50
+  - 10
+  - 178
+  - 19
+  - 49
+  - 0
+  - 178
+  - 20
+  - 137
+  - 53
+  - 6
+  - 53
+  - 5
+  - 177
+  - 34
+  - 178
+  - 16
+  - 52
+  - 6
+  - 178
+  - 8
+  - 50
+  - 10
+  - 178
+  - 0
+  - 52
+  - 5
+  - 178
+  - 7
+  - 50
+  - 0
+  - 178
+  - 1
+  - 179
+  - 137
+  - 53
+  - 7
+  - 129
+  - 144
+  - 78
+  - 129
+  - 232
+  - 7
+  - 9
+  - 137
+tealCode: |
+  #pragma version 6
+  txn ApplicationID
+  int 0
+  ==
+  bnz main_l26
+  txn OnCompletion
+  int OptIn
+  ==
+  bnz main_l25
+  txn OnCompletion
+  int UpdateApplication
+  ==
+  bnz main_l24
+  txn OnCompletion
+  int DeleteApplication
+  ==
+  bnz main_l23
+  txna ApplicationArgs 0
+  byte "set_whitelist"
+  ==
+  bnz main_l20
+  txna ApplicationArgs 0
+  byte "set_manager"
+  ==
+  bnz main_l19
+  txna ApplicationArgs 0
+  byte "buy"
+  ==
+  bnz main_l14
+  txna ApplicationArgs 0
+  byte "claim"
+  ==
+  bnz main_l13
+  txna ApplicationArgs 0
+  byte "give_discount"
+  ==
+  bnz main_l12
+  txna ApplicationArgs 0
+  byte "redeem"
+  ==
+  bnz main_l11
+  err
+  main_l11:
+  txn Sender
+  byte "manager"
+  app_global_get
+  ==
+  global GroupSize
+  int 1
+  ==
+  &&
+  assert
+  txn Sender
+  txna ApplicationArgs 1
+  callsub sendpayment_3
+  int 1
+  return
+  main_l12:
+  global GroupSize
+  int 1
+  ==
+  txn NumAccounts
+  int 1
+  ==
+  &&
+  txn RekeyTo
+  global ZeroAddress
+  ==
+  txn CloseRemainderTo
+  global ZeroAddress
+  ==
+  &&
+  txn AssetCloseTo
+  global ZeroAddress
+  ==
+  &&
+  &&
+  txn Sender
+  byte "manager"
+  app_global_get
+  ==
+  &&
+  assert
+  txna Accounts 1
+  byte "has_discount"
+  int 1
+  app_local_put
+  int 1
+  return
+  main_l13:
+  txn Sender
+  byte "unclaimed"
+  app_local_get
+  callsub transferasset_2
+  int 1
+  return
+  main_l14:
+  global GroupSize
+  int 2
+  ==
+  assert
+  gtxn 1 Sender
+  callsub computetotalprice_4
+  store 0
+  gtxn 1 TypeEnum
+  int pay
+  ==
+  gtxn 1 Sender
+  gtxn 0 Sender
+  ==
+  &&
+  gtxn 1 Amount
+  load 0
+  >=
+  &&
+  gtxn 1 Receiver
+  global CurrentApplicationAddress
+  ==
+  &&
+  gtxn 1 Sender
+  byte "whitelisted"
+  app_local_get
+  &&
+  assert
+  gtxna 0 ApplicationArgs 1
+  gtxna 0 ApplicationArgs 2
+  callsub executeminttx_1
+  gtxn 0 Sender
+  byte "unclaimed"
+  load 1
+  app_local_put
+  callsub increasemintedunits_0
+  gtxn 1 Amount
+  load 0
+  global MinTxnFee
+  +
+  >
+  bnz main_l18
+  main_l15:
+  gtxn 1 Sender
+  byte "has_discount"
+  app_local_get
+  int 1
+  ==
+  bnz main_l17
+  main_l16:
+  int 1
+  return
+  main_l17:
+  gtxn 1 Sender
+  byte "has_discount"
+  int 0
+  app_local_put
+  b main_l16
+  main_l18:
+  gtxn 1 Sender
+  gtxn 1 Amount
+  load 0
+  -
+  global MinTxnFee
+  -
+  callsub sendpayment_3
+  b main_l15
+  main_l19:
+  global GroupSize
+  int 1
+  ==
+  txn NumAccounts
+  int 1
+  ==
+  &&
+  txn RekeyTo
+  global ZeroAddress
+  ==
+  txn CloseRemainderTo
+  global ZeroAddress
+  ==
+  &&
+  txn AssetCloseTo
+  global ZeroAddress
+  ==
+  &&
+  &&
+  txn Sender
+  byte "manager"
+  app_global_get
+  ==
+  &&
+  assert
+  byte "manager"
+  txna Accounts 1
+  app_global_put
+  int 1
+  return
+  main_l20:
+  global GroupSize
+  int 1
+  ==
+  txn NumAccounts
+  int 1
+  ==
+  &&
+  txn RekeyTo
+  global ZeroAddress
+  ==
+  txn CloseRemainderTo
+  global ZeroAddress
+  ==
+  &&
+  txn AssetCloseTo
+  global ZeroAddress
+  ==
+  &&
+  &&
+  txn Sender
+  byte "manager"
+  app_global_get
+  ==
+  &&
+  assert
+  txna Accounts 1
+  byte "whitelisted"
+  app_local_get
+  int 0
+  ==
+  bnz main_l22
+  main_l21:
+  txna Accounts 1
+  byte "whitelisted"
+  int 1
+  app_local_put
+  int 1
+  return
+  main_l22:
+  byte "whitelist_count"
+  byte "whitelist_count"
+  app_global_get
+  int 1
+  +
+  app_global_put
+  b main_l21
+  main_l23:
+  txn Sender
+  byte "manager"
+  app_global_get
+  ==
+  global GroupSize
+  int 1
+  ==
+  &&
+  assert
+  int 1
+  return
+  main_l24:
+  txn Sender
+  byte "manager"
+  app_global_get
+  ==
+  global GroupSize
+  int 1
+  ==
+  &&
+  assert
+  int 1
+  return
+  main_l25:
+  global GroupSize
+  int 1
+  ==
+  txn NumAppArgs
+  int 0
+  ==
+  &&
+  txn RekeyTo
+  global ZeroAddress
+  ==
+  txn CloseRemainderTo
+  global ZeroAddress
+  ==
+  &&
+  txn AssetCloseTo
+  global ZeroAddress
+  ==
+  &&
+  &&
+  assert
+  txn Sender
+  byte "whitelisted"
+  int 0
+  app_local_put
+  txn Sender
+  byte "has_discount"
+  int 0
+  app_local_put
+  txn Sender
+  byte "unclaimed"
+  int 0
+  app_local_put
+  int 1
+  return
+  main_l26:
+  global GroupSize
+  int 1
+  ==
+  txn RekeyTo
+  global ZeroAddress
+  ==
+  txn CloseRemainderTo
+  global ZeroAddress
+  ==
+  &&
+  txn AssetCloseTo
+  global ZeroAddress
+  ==
+  &&
+  &&
+  assert
+  byte "whitelist_count"
+  int 0
+  app_global_put
+  byte "manager"
+  txn Sender
+  app_global_put
+  byte "minted_units"
+  int 0
+  app_global_put
+  int 1
+  return
+
+  // increase_minted_units
+  increasemintedunits_0:
+  byte "minted_units"
+  byte "minted_units"
+  app_global_get
+  int 1
+  +
+  app_global_put
+  retsub
+
+  // execute_mint_tx
+  executeminttx_1:
+  store 3
+  store 2
+  itxn_begin
+  int acfg
+  itxn_field TypeEnum
+  int 1
+  itxn_field ConfigAssetTotal
+  int 0
+  itxn_field ConfigAssetDecimals
+  byte "DYN"
+  itxn_field ConfigAssetUnitName
+  byte "Dyno"
+  itxn_field ConfigAssetName
+  int 0
+  itxn_field ConfigAssetDefaultFrozen
+  byte "manager"
+  app_global_get
+  itxn_field ConfigAssetManager
+  load 2
+  itxn_field ConfigAssetURL
+  load 3
+  itxn_field Note
+  global MinTxnFee
+  itxn_field Fee
+  itxn_submit
+  itxn CreatedAssetID
+  store 1
+  retsub
+
+  // transfer_asset
+  transferasset_2:
+  store 4
+  itxn_begin
+  int axfer
+  itxn_field TypeEnum
+  load 4
+  itxn_field XferAsset
+  int 1
+  itxn_field AssetAmount
+  global CurrentApplicationAddress
+  itxn_field AssetSender
+  txn Sender
+  itxn_field AssetReceiver
+  retsub
+
+  // send_payment
+  sendpayment_3:
+  store 6
+  store 5
+  itxn_begin
+  int pay
+  itxn_field TypeEnum
+  load 6
+  itxn_field Amount
+  global CurrentApplicationAddress
+  itxn_field Sender
+  load 5
+  itxn_field Receiver
+  global MinTxnFee
+  itxn_field Fee
+  itxn_submit
+  retsub
+
+  // compute_total_price
+  computetotalprice_4:
+  store 7
+  int 10000
+  int 1000
+  -
+  retsub
+scParams: {}
