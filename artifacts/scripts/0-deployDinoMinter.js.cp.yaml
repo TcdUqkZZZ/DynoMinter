@@ -1,16 +1,16 @@
 purestake:
-    timestamp: 1655995798397
+    timestamp: 1656082059475
     metadata: {}
     asa: {}
     app:
         dinoMinter:
-            1655995798:
+            1656082059:
                 creator: EN7GP647Z2B44PRK5XXTXCB66UQT7QGLWPVLOPFD6HAIHGCWVJKXSOMVQM
-                txID: NDA77NTSNP6KVTWD27N7KBLF3HIRM2JOKSA2QZTAETC4O3HPM5NA
-                confirmedRound: 22400235
-                appID: 96684192
-                applicationAccount: NLSIGFGXSIRXYJC6YERMY7Z6RWCVREKE3UAW6W3V75EHOJYHULUSJ6M52Q
-                timestamp: 1655995798
+                txID: DKSUMNDTCAZ3FW555FJ6GK56CPETSCSL6CHSRHIZLOGR6GX2Y46Q
+                confirmedRound: 22420627
+                appID: 96824178
+                applicationAccount: IFVIKBXEC3BCILPOB2SUZLWOUEID6YYVHUSE24E5WRMHKFKEOLUP36GLTE
+                timestamp: 1656082059
                 deleted: false
                 approvalFile: dino_minter.py
                 clearFile: clear_state.py

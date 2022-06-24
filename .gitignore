@@ -2,3 +2,4 @@ node_modules
 algob.config.js
 yarn-error.log
 yarn.lock
+venv

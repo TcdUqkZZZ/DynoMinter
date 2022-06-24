@@ -1,9 +1,11 @@
 const { types } = require("@algo-builder/web");
 
-const appId = 96684192
 
 async function run(runtimeEnv, deployer) {
     let accounts = deployer.accounts;
+    
+    const App = await deployer.getApp("dinoMinter");
+    const appId = App.appID
 
     const admin = accounts[0];
     const buyer = accounts[1];

@@ -1,8 +1,8 @@
 filename: dino_minter.py
-timestamp: 1655995761
-compiled: BiADAQAEJgYHbWFuYWdlcgxoYXNfZGlzY291bnQLd2hpdGVsaXN0ZWQJdW5jbGFpbWVkD3doaXRlbGlzdF9jb3VudAxtaW50ZWRfdW5pdHMxGCMSQAHvMRkiEkABuzEZJBJAAacxGYEFEkABkjYaAIANc2V0X3doaXRlbGlzdBJAAT02GgCAC3NldF9tYW5hZ2VyEkABADYaAIADYnV5EkAAfDYaAIAFY2xhaW0SQABlNhoAgA1naXZlX2Rpc2NvdW50EkAAJTYaAIAGcmVkZWVtEkAAAQAxAChkEjIEIhIQRDEANhoBiAHXIkMyBCISMR0iEhAxIDIDEjEJMgMSEDEVMgMSEBAxAChkEhBENhwBKSJmIkMxACtiiAGOIkMyBIECEkQzAQCIAbA1ADMBECISMwEAMwAAEhAzAQg0AA8QMwEHMgoSEDMBACpiEEQ3ABoBNwAaAogBGjMAACs0AWaIAQczAQg0ADIACA1AABUzAQApYiISQAACIkMzAQApI2ZC//UzAQAzAQg0AAkyAAmIAS1C/9kyBCISMR0iEhAxIDIDEjEJMgMSEDEVMgMSEBAxAChkEhBEKDYcAWciQzIEIhIxHSISEDEgMgMSMQkyAxIQMRUyAxIQEDEAKGQSEEQ2HAEqYiMSQAAINhwBKiJmIkMnBCcEZCIIZ0L/7TEAKGQSMgQiEhBEIkMxAChkEjIEIhIQRCJDMgQiEjEbIxIQMSAyAxIxCTIDEhAxFTIDEhAQRDEAKiNmMQApI2YxACsjZiJDMgQiEjEgMgMSMQkyAxIQMRUyAxIQEEQnBCNnKDEAZycFI2ciQycFJwVkIghniTUDNQKxgQOyECKyIiOyI4ADRFlOsiWABER5bm+yJiOyJChksik0ArInNAOyBTIAsgGztDw1AYk1BLEkshA0BLIRIrISMgqyEzEAshSJNQY1BbEishA0BrIIMgqyADQFsgcyALIBs4k1B4GQToHoBwmJ
-compiledHash: QDERNZEBIPBL3XHDEFXGUL4GCQR5IZ6WIUODZNTRQROO24T3RIL2GLLHJQ
-srcHash: 3015499400
+timestamp: 1656082053
+compiled: BiADAQAEJgYHbWFuYWdlcgxoYXNfZGlzY291bnQJdW5jbGFpbWVkC3doaXRlbGlzdGVkD3doaXRlbGlzdF9jb3VudAxtaW50ZWRfdW5pdHMxGCMSQAH4MRkiEkABxDEZJBJAAbAxGYEFEkABmzYaAIANc2V0X3doaXRlbGlzdBJAAUY2GgCAC3NldF9tYW5hZ2VyEkABCTYaAIADYnV5EkAAhTYaAIAFY2xhaW0SQABlNhoAgA1naXZlX2Rpc2NvdW50EkAAJTYaAIAGcmVkZWVtEkAAAQAxAChkEjIEIhIQRDEANhoBiAHlIkMyBCISMR0iEhAxIDIDEjEJMgMSEDEVMgMSEBAxAChkEhBENhwBKSJmIkM2MAAxACpiEkQxACpiiAGSIkMyBIECEkQzAQCIAbU1ADMBECISMwEAMwAAEhAzAQg0AA8QMwEHMgoSEDMBACtiEEQ3ABoBNwAaAogBGjMAACo0AWaIAQczAQg0ADIACA1AABUzAQApYiISQAACIkMzAQApI2ZC//UzAQAzAQg0AAkyAAmIATJC/9kyBCISMR0iEhAxIDIDEjEJMgMSEDEVMgMSEBAxAChkEhBEKDYcAWciQzIEIhIxHSISEDEgMgMSMQkyAxIQMRUyAxIQEDEAKGQSEEQ2HAErYiMSQAAINhwBKyJmIkMnBCcEZCIIZ0L/7TEAKGQSMgQiEhBEIkMxAChkEjIEIhIQRCJDMgQiEjEbIxIQMSAyAxIxCTIDEhAxFTIDEhAQRDEAKyNmMQApI2YxACojZiJDMgQiEjEgMgMSMQkyAxIQMRUyAxIQEEQnBCNnKDEAZycFI2ciQycFJwVkIghniTUDNQKxgQOyECKyIiOyI4ADRFlOsiWABER5bm+yJiOyJDIKsiwoZLIpNAKyJzQDsgUyALIBs7Q8NQGJNQSxJLIQNASyESKyEjIKshMxALIUs4k1BjUFsSKyEDQGsggyCrIANAWyBzIAsgGziTUHgZBOgegHCYk=
+compiledHash: RHA3THGHYPNORBN6GHPLGDODUN7TOP53CZF3DB5PAEPS37AS57AXXNXJPE
+srcHash: 2186014064
 base64ToBytes:
   - 6
   - 32
@@ -33,6 +33,16 @@ base64ToBytes:
   - 117
   - 110
   - 116
+  - 9
+  - 117
+  - 110
+  - 99
+  - 108
+  - 97
+  - 105
+  - 109
+  - 101
+  - 100
   - 11
   - 119
   - 104
@@ -43,16 +53,6 @@ base64ToBytes:
   - 105
   - 115
   - 116
-  - 101
-  - 100
-  - 9
-  - 117
-  - 110
-  - 99
-  - 108
-  - 97
-  - 105
-  - 109
   - 101
   - 100
   - 15
@@ -90,21 +90,21 @@ base64ToBytes:
   - 18
   - 64
   - 1
-  - 239
+  - 248
   - 49
   - 25
   - 34
   - 18
   - 64
   - 1
-  - 187
+  - 196
   - 49
   - 25
   - 36
   - 18
   - 64
   - 1
-  - 167
+  - 176
   - 49
   - 25
   - 129
@@ -112,7 +112,7 @@ base64ToBytes:
   - 18
   - 64
   - 1
-  - 146
+  - 155
   - 54
   - 26
   - 0
@@ -134,7 +134,7 @@ base64ToBytes:
   - 18
   - 64
   - 1
-  - 61
+  - 70
   - 54
   - 26
   - 0
@@ -154,7 +154,7 @@ base64ToBytes:
   - 18
   - 64
   - 1
-  - 0
+  - 9
   - 54
   - 26
   - 0
@@ -166,7 +166,7 @@ base64ToBytes:
   - 18
   - 64
   - 0
-  - 124
+  - 133
   - 54
   - 26
   - 0
@@ -237,7 +237,7 @@ base64ToBytes:
   - 1
   - 136
   - 1
-  - 215
+  - 229
   - 34
   - 67
   - 50
@@ -282,13 +282,22 @@ base64ToBytes:
   - 102
   - 34
   - 67
+  - 54
+  - 48
+  - 0
   - 49
   - 0
-  - 43
+  - 42
+  - 98
+  - 18
+  - 68
+  - 49
+  - 0
+  - 42
   - 98
   - 136
   - 1
-  - 142
+  - 146
   - 34
   - 67
   - 50
@@ -302,7 +311,7 @@ base64ToBytes:
   - 0
   - 136
   - 1
-  - 176
+  - 181
   - 53
   - 0
   - 51
@@ -335,7 +344,7 @@ base64ToBytes:
   - 51
   - 1
   - 0
-  - 42
+  - 43
   - 98
   - 16
   - 68
@@ -353,7 +362,7 @@ base64ToBytes:
   - 51
   - 0
   - 0
-  - 43
+  - 42
   - 52
   - 1
   - 102
@@ -407,7 +416,7 @@ base64ToBytes:
   - 9
   - 136
   - 1
-  - 45
+  - 50
   - 66
   - 255
   - 217
@@ -489,7 +498,7 @@ base64ToBytes:
   - 54
   - 28
   - 1
-  - 42
+  - 43
   - 98
   - 35
   - 18
@@ -499,7 +508,7 @@ base64ToBytes:
   - 54
   - 28
   - 1
-  - 42
+  - 43
   - 34
   - 102
   - 34
@@ -571,7 +580,7 @@ base64ToBytes:
   - 68
   - 49
   - 0
-  - 42
+  - 43
   - 35
   - 102
   - 49
@@ -581,7 +590,7 @@ base64ToBytes:
   - 102
   - 49
   - 0
-  - 43
+  - 42
   - 35
   - 102
   - 34
@@ -665,6 +674,10 @@ base64ToBytes:
   - 35
   - 178
   - 36
+  - 50
+  - 10
+  - 178
+  - 44
   - 40
   - 100
   - 178
@@ -708,6 +721,7 @@ base64ToBytes:
   - 0
   - 178
   - 20
+  - 179
   - 137
   - 53
   - 6
@@ -836,6 +850,12 @@ tealCode: |
   int 1
   return
   main_l13:
+  txna Assets 0
+  txn Sender
+  byte "unclaimed"
+  app_local_get
+  ==
+  assert
   txn Sender
   byte "unclaimed"
   app_local_get
@@ -1102,6 +1122,8 @@ tealCode: |
   itxn_field ConfigAssetName
   int 0
   itxn_field ConfigAssetDefaultFrozen
+  global CurrentApplicationAddress
+  itxn_field ConfigAssetClawback
   byte "manager"
   app_global_get
   itxn_field ConfigAssetManager
@@ -1130,6 +1152,7 @@ tealCode: |
   itxn_field AssetSender
   txn Sender
   itxn_field AssetReceiver
+  itxn_submit
   retsub
 
   // send_payment

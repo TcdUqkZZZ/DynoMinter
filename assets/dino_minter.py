@@ -42,6 +42,7 @@ def approval():
                 TxnField.config_asset_unit_name: Bytes("DYN"),
                 TxnField.config_asset_name: Bytes("Dyno"),
                 TxnField.config_asset_default_frozen: Int(0),
+                TxnField.config_asset_clawback: Global.current_application_address(),
                 TxnField.config_asset_manager: App.globalGet(manager),
                 TxnField.config_asset_url: url,
                 TxnField.note: metadata,
@@ -62,7 +63,8 @@ def approval():
                 TxnField.asset_amount: Int(1),
                 TxnField.asset_sender: Global.current_application_address(),
                 TxnField.asset_receiver: Txn.sender()
-            })
+            }),
+            InnerTxnBuilder.Submit()
         ])
 
 
@@ -168,6 +170,9 @@ def approval():
     )
 
     handle_claim = Seq(
+        Assert(
+            Txn.assets[0] == App.localGet(Txn.sender(), unclaimed_asset)
+        ),
         transfer_asset(App.localGet(Txn.sender(), unclaimed_asset)),
         Approve()
         )

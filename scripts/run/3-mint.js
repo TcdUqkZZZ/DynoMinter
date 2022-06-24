@@ -1,17 +1,20 @@
 const { types } = require("@algo-builder/web");
 
-const appId = 96684192
-const appAddr = 'NLSIGFGXSIRXYJC6YERMY7Z6RWCVREKE3UAW6W3V75EHOJYHULUSJ6M52Q'
 
 async function run(runtimeEnv, deployer) {
 
-    let url = "str:ipfs://belandi"
+    let url = "str:ipfs://Qmey46LyR31EAeSMtroAdhxhkf2uKnqZUeJRWqWDfYJcoj"
     let metadata = "str:besughi"
 
     const buyer = deployer.accountsByName.get("buyer")
     const admin = deployer.accountsByName.get("admin")
 
-    let amount = 9000
+    const App = await deployer.getApp("dinoMinter");
+    const appId = App.appID
+    const appAddr = App.applicationAccount
+
+    let amount = 90000
+    
     let fund = 2e6
     await deployer.executeTx(
         [
@@ -49,21 +52,7 @@ async function run(runtimeEnv, deployer) {
      console.log(buyer)
     let txGroup = [tx1, tx2]
     await deployer.executeTx(txGroup)
-/*
-    await deployer.executeTx(
-        {
-            type: types.TransactionType.CallApp,
-            sign: types.SignType.SecretKey,
-            fromAccount: buyer.account,
-            appID: appId,
-            payFlags: {totalFee: 1000},
-            appArgs: ["str:claim"],
-            foreignAssets: [parseInt(await readAppLocalState(deployer, buyer.addr, appId))]
-        }
-    
-    )
 
-    */
 }
 
 module.exports = {default: run};

@@ -1,11 +1,11 @@
 const { types } = require("@algo-builder/web");
 const { readAppLocalState } = require("@algo-builder/algob");
 
-const appId = 96684192
-
 async function run(runtimeEnv, deployer) {
-    const admin = deployer.accountsByName.get("admin");
     const buyer = deployer.accountsByName.get("buyer");
+
+    const App = await deployer.getApp("dinoMinter");
+    const appId = App.appID
 
 
 
