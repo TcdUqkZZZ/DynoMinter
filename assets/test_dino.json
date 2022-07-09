@@ -1,0 +1,18 @@
+{
+   "standard":"arc69",
+   "description":"arc69 Dino Test",
+   "external_url":"ipfs://Qmey46LyR31EAeSMtroAdhxhkf2uKnqZUeJRWqWDfYJcoj",
+   "mime_type":"image/png",
+   "properties":{
+      "Skin":"Skin",
+      "hair":"hair",
+      "face":"face",
+      "accessory":"accessory",
+      "background":"bacground",
+      "sign":"sign",
+      "eyes":"eyes",
+      "eyewear":"eyewear",
+      "tail":"tail",
+      "phrase":"phrase"
+   }
+}

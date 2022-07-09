@@ -2,18 +2,22 @@ from pyteal import *
 from pyteal.ast.bytes import Bytes
 
 def approval():
-    PRICE_PER_UNIT = Int(10000)
+    PRICE_PER_UNIT = Int(100000000)
     DISCOUNT = Int(1000)
     MAX_UNITS = Int(1000)
+    TIER_1_DISCOUNT = Int(10000000)
+    TIER_2_DISCOUNT = Int(5000000)
+    TIER_3_DISCOUNT = Int(2000000)
+    TIER_4_DISCOUNT = Int(1000000)
     
     # locals
-    has_discount = Bytes("has_discount")
     whitelisted = Bytes("whitelisted")
     unclaimed_asset = Bytes("unclaimed")
     # globals
     minted_units = Bytes("minted_units")
     manager = Bytes("manager")
     whitelist_count = Bytes("whitelist_count")
+    current_tier  = Bytes("current_tier")
     # Operations
     set_manager = Bytes("set_manager")
     give_discount = Bytes("give_discount")
@@ -21,6 +25,7 @@ def approval():
     claim = Bytes("claim")
     set_whitelist= Bytes("set_whitelist")
     redeem = Bytes("redeem")
+    increase_tier = Bytes("increase_tier")
     #Scratch
     s = ScratchVar(TealType.uint64)
     asset = ScratchVar(TealType.uint64)
@@ -85,10 +90,18 @@ def approval():
     
     @Subroutine(TealType.uint64)
     def compute_total_price(account):
-        if App.localGet(account, has_discount) == Int(1):
-            return (Minus(PRICE_PER_UNIT, DISCOUNT))
-        else:
-            return PRICE_PER_UNIT
+        match App.localGet(account, whitelisted):
+            case Int(1):
+                return PRICE_PER_UNIT - TIER_1_DISCOUNT
+            case Int(2):
+                return PRICE_PER_UNIT - TIER_2_DISCOUNT
+            case Int(3):
+                return PRICE_PER_UNIT - TIER_3_DISCOUNT
+            case Int(4):
+                return PRICE_PER_UNIT - TIER_4_DISCOUNT
+            case _:
+                return PRICE_PER_UNIT
+
 
     basic_checks = And(
         Txn.rekey_to() == Global.zero_address(),
@@ -111,25 +124,21 @@ def approval():
         App.globalPut(whitelist_count, Int(0)),
         App.globalPut(manager, Txn.sender()),
         App.globalPut(minted_units, Int(0)),
+        App.globalPut(current_tier, Int(0)),
         Approve()
     ])
 
-    set_discount = Seq(
-        Seq(
-            Assert(
-                And(
-                    Global.group_size() == Int(1),
-                    Txn.accounts.length() == Int(1),
-                    basic_checks,
-                    Txn.sender() == App.globalGet(manager),
+    increase_tier = Seq([
+        Assert(
+            And(
+                Global.group_size() == Int(1),
+                Txn.sender() == App.globalGet(manager),
+                App.globalGet(current_tier) <= Int(4)
                 )
             ),
-            App.localPut(Txn.accounts[1], has_discount, Int(1)),
-            Approve()
-        )
-    )
-
-
+        App.globalPut(current_tier, App.globalGet(current_tier) + Int(1)),
+        Approve()
+    ])
 
     handle_optin = Seq([
         Assert(And(
@@ -152,7 +161,8 @@ def approval():
             Gtxn[1].sender() == Gtxn[0].sender(),
             Gtxn[1].amount() >= s.load(),
             Gtxn[1].receiver() == Global.current_application_address(),
-            App.localGet(Gtxn[1].sender(), whitelisted)
+            App.localGet(Gtxn[1].sender(), whitelisted),
+            App.localGet(Gtxn[1].sender(), whitelisted) == App.globalGet(current_tier)
         ))
         ,
         execute_mint_tx(Gtxn[0].application_args[1], Gtxn[0].application_args[2]),
@@ -264,10 +274,6 @@ def approval():
                     ],
                     [
                         Txn.application_args[0] == claim, handle_claim
-                    ],
-                    [
-                        Txn.application_args[0] == give_discount,
-                        set_discount
                     ],
                     [
                         Txn.application_args[0] == redeem, handle_redeem
