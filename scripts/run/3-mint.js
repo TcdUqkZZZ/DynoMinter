@@ -1,15 +1,15 @@
 const { types } = require("@algo-builder/web");
-
+const test = require('/home/tcdkzrz/DynoMinter/assets/test_dino.json')
 
 async function run(runtimeEnv, deployer) {
 
     let url = "str:ipfs://Qmey46LyR31EAeSMtroAdhxhkf2uKnqZUeJRWqWDfYJcoj"
-    let metadata = "str:besughi"
+    let metadata = `str:${JSON.stringify(test)}`
 
     const buyer = deployer.accountsByName.get("buyer")
     const admin = deployer.accountsByName.get("admin")
 
-    const App = await deployer.getApp("dinoMinter");
+    const App = await deployer.getApp("dinoMinter");2
     const appId = App.appID
     const appAddr = App.applicationAccount
 
