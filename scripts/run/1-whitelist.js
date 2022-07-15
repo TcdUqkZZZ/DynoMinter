@@ -21,7 +21,7 @@ async function run(runtimeEnv, deployer) {
         fromAccount: admin,
         appID: appId,
         payFlags: { totalFee: 1000 },
-        appArgs: ["str:set_whitelist"],
+        appArgs: ["str:set_whitelist", "int:1"],
         accounts: [buyer.addr],
     },
 );
