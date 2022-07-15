@@ -38,30 +38,17 @@ describe('dinoMinter test', () => {
         );
 
         const managerAcct = ctx.getAccount(managerAddr);
+
         ctx.whitelist(
             managerAcct.account,
             ctx.buyer1.address,
             );
-        
+
 
         ctx.syncAccounts();
 
         assert.equal(ctx.buyer1.getLocalState(ctx.App.appID, "whitelisted"), 1n);
 
-    })
-
-    it('Should let manager give discounts', () => {
-        ctx.optIn(ctx.buyer1.address);
-        assert.equal(ctx.buyer1.getLocalState(ctx.App.appID, "has_discount"), 0n)
-
-        ctx.giveDiscount(
-            ctx.manager.account,
-            ctx.buyer1.address
-        )
-
-        ctx.syncAccounts()
-
-        assert.equal(ctx.buyer1.getLocalState(ctx.App.appID, "has_discount"), 1n)
     })
 
     it('Should set whitelist status to 0 upon opt-in', () => {
@@ -104,12 +91,14 @@ describe('dinoMinter test', () => {
             ctx.buyer1.address,
             );
 
+        ctx.increaseTier(managerAcct.account)
         ctx.buy(buyer1.account, 150000, "str:wegabibou", "str:belandijuliana")
         ctx.syncAccounts();
-        ctx.runtime.optIntoASA(parseInt(ctx.buyer1.getLocalState(ctx.App.appID, "unclaimed")), buyer1.address, {})
+        assetId = parseInt(ctx.buyer1.getLocalState(ctx.App.appID, "unclaimed"))
+        ctx.runtime.optIntoASA(assetId, buyer1.address, {})
         ctx.syncAccounts();
-
-        assert.isNotEmpty(ctx.buyer1.assets)
+        ctx.claim(buyer1.account, assetId)
+        assert.isNotEmpty(ctx.buyer1.assets, assetId)
 
 
     })
@@ -122,26 +111,50 @@ describe('dinoMinter test', () => {
         })
     })
 
-    it('should refund appropriate amount if excess payment is made', () => {
-        ctx.optIn(ctx.buyer1.address);
-        let initialBalance = ctx.buyer1.balance()
-
+    it('should let unwhitelisted user purchase token if sale is open', () => {
+        ctx.optIn(ctx.buyer2.address);
         const managerAddr = encodeAddress(
             ctx.runtime.getGlobalState(ctx.App.appID, "manager")
         );
 
         const managerAcct = ctx.getAccount(managerAddr);
-        ctx.whitelist(
-            managerAcct.account,
-            ctx.buyer1.address,
-            );
 
-        ctx.buy(buyer1.account, 150000, "str:SPLAAASH", "str:{il gabibbo}")
+        ctx.open(managerAcct.account)
+
+        ctx.buy(buyer2.account, 150000, "str:belandi" , "str: Ragassi")
+        ctx.syncAccounts();
+        assetId = parseInt(ctx.buyer2.getLocalState(ctx.App.appID, "unclaimed"))
+        ctx.runtime.optIntoASA(assetId, buyer2.address, {})
+        ctx.syncAccounts();
+        ctx.claim(buyer2.account, assetId)
+        ctx.syncAccounts();
+        assert.isNotEmpty(ctx.buyer2.assets, assetId)
+        
+    })
+
+    it('should refund appropriate amount if excess payment is made', () => {
+        ctx.optIn(ctx.buyer1.address);
+        
+        const managerAddr = encodeAddress(
+            ctx.runtime.getGlobalState(ctx.App.appID, "manager")
+            );
+            
+            const managerAcct = ctx.getAccount(managerAddr);
+            ctx.whitelist(
+                managerAcct.account,
+                ctx.buyer1.address,
+                );
+                
+        ctx.syncAccounts()
+        let initialBalance = ctx.buyer1.balance()
+        let price = ctx.runtime.getGlobalState(ctx.App.appID, "price")
+        let discount = price/10n
+        ctx.buy(buyer1.account, price + BigInt(100000), "str:SPLAAASH", "str:{il gabibbo}")
 
         ctx.syncAccounts()
-
+        let totalFees = 5000n
         let finalBalance = ctx.buyer1.balance()
-        expect(parseInt(initialBalance) - parseInt(finalBalance)).to.be.eq(14000)
+        expect(BigInt(parseInt(initialBalance) - parseInt(finalBalance))).to.be.eq(price + totalFees - discount)
     })
 
 })

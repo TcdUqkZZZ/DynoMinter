@@ -5,11 +5,7 @@ def approval():
     PRICE_PER_UNIT = Int(100000000)
     DISCOUNT = Int(1000)
     MAX_UNITS = Int(1000)
-    TIER_1_DISCOUNT = Int(10000000)
-    TIER_2_DISCOUNT = Int(5000000)
-    TIER_3_DISCOUNT = Int(2000000)
-    TIER_4_DISCOUNT = Int(1000000)
-    
+
     # locals
     whitelisted = Bytes("whitelisted")
     unclaimed_asset = Bytes("unclaimed")
@@ -18,18 +14,30 @@ def approval():
     manager = Bytes("manager")
     whitelist_count = Bytes("whitelist_count")
     current_tier  = Bytes("current_tier")
+    price = Bytes("price")
+    is_open = Bytes("is_open")
     # Operations
     set_manager = Bytes("set_manager")
-    give_discount = Bytes("give_discount")
     buy = Bytes("buy")
     claim = Bytes("claim")
     set_whitelist= Bytes("set_whitelist")
     redeem = Bytes("redeem")
     increase_tier = Bytes("increase_tier")
+    open_minting = Bytes("open")
     #Scratch
     s = ScratchVar(TealType.uint64)
     asset = ScratchVar(TealType.uint64)
 
+
+    @Subroutine(TealType.uint64)
+    def compute_total_price(account):
+        account_tier_status = App.localGet(account, whitelisted)
+        discount = Div(App.globalGet(price), Int(10))
+        return (
+            If(account_tier_status > Int(0))
+            .Then(Minus(App.globalGet(price), discount))
+            .Else(App.globalGet(price))
+        )
 
     @Subroutine(TealType.none)
     def increase_minted_units():
@@ -88,19 +96,7 @@ def approval():
         ])        
 
     
-    @Subroutine(TealType.uint64)
-    def compute_total_price(account):
-        match App.localGet(account, whitelisted):
-            case Int(1):
-                return PRICE_PER_UNIT - TIER_1_DISCOUNT
-            case Int(2):
-                return PRICE_PER_UNIT - TIER_2_DISCOUNT
-            case Int(3):
-                return PRICE_PER_UNIT - TIER_3_DISCOUNT
-            case Int(4):
-                return PRICE_PER_UNIT - TIER_4_DISCOUNT
-            case _:
-                return PRICE_PER_UNIT
+
 
 
     basic_checks = And(
@@ -128,18 +124,6 @@ def approval():
         Approve()
     ])
 
-    increase_tier = Seq([
-        Assert(
-            And(
-                Global.group_size() == Int(1),
-                Txn.sender() == App.globalGet(manager),
-                App.globalGet(current_tier) <= Int(4)
-                )
-            ),
-        App.globalPut(current_tier, App.globalGet(current_tier) + Int(1)),
-        Approve()
-    ])
-
     handle_optin = Seq([
         Assert(And(
             Global.group_size() == Int(1),
@@ -147,7 +131,6 @@ def approval():
             basic_checks
         )),
         App.localPut(Txn.sender(), whitelisted, Int(0)),
-        App.localPut(Txn.sender(), has_discount, Int(0)),
         App.localPut(Txn.sender(), unclaimed_asset, Int(0)),
         Approve(),
         
@@ -156,15 +139,19 @@ def approval():
     handle_payment = Seq(
         Assert( Global.group_size() == Int(2)),
         s.store(compute_total_price(Gtxn[1].sender())),
-        Assert(And(           
+        Assert(And(        
             Gtxn[1].type_enum() == TxnType().Payment,
             Gtxn[1].sender() == Gtxn[0].sender(),
             Gtxn[1].amount() >= s.load(),
             Gtxn[1].receiver() == Global.current_application_address(),
-            App.localGet(Gtxn[1].sender(), whitelisted),
-            App.localGet(Gtxn[1].sender(), whitelisted) == App.globalGet(current_tier)
-        ))
-        ,
+            App.localGet(Gtxn[1].sender(), unclaimed_asset) == Int(0),
+            ),
+        ),
+        If(
+            App.globalGet(is_open) == Int(0),
+            Assert(
+            App.localGet(Gtxn[1].sender(), whitelisted) == App.globalGet(current_tier))
+            ),
         execute_mint_tx(Gtxn[0].application_args[1], Gtxn[0].application_args[2]),
         App.localPut(Gtxn[0].sender(), unclaimed_asset, asset.load()),
         increase_minted_units(),
@@ -172,10 +159,7 @@ def approval():
             Gtxn[1].amount() > (s.load() + Global.min_txn_fee()),
             send_payment(Gtxn[1].sender(), (Gtxn[1].amount() - s.load() - Global.min_txn_fee()))
         ),
-        If(
-            App.localGet(Gtxn[1].sender(), has_discount) == Int(1),
-            App.localPut(Gtxn[1].sender(), has_discount, Int(0))
-        ),
+
         Approve()
     )
 
@@ -184,6 +168,7 @@ def approval():
             Txn.assets[0] == App.localGet(Txn.sender(), unclaimed_asset)
         ),
         transfer_asset(App.localGet(Txn.sender(), unclaimed_asset)),
+        App.localPut(Txn.sender(), unclaimed_asset, Int(0)),
         Approve()
         )
     
@@ -192,15 +177,15 @@ def approval():
             Assert(And(
                 Global.group_size() == Int(1),
                 Txn.accounts.length() == Int(1),
+                Txn.application_args.length() == Int(2),
                 basic_checks,
                 Txn.sender() == App.globalGet(manager),
             )),
             If(
-                App.localGet(Txn.accounts[1], Bytes("whitelisted")) == Int(0),
+                App.localGet(Txn.accounts[1], whitelisted) == Int(0),
                 App.globalPut(whitelist_count, App.globalGet(whitelist_count) + Int(1)),
             ),
-
-            App.localPut(Txn.accounts[1], Bytes("whitelisted"), Int(1)),
+            App.localPut(Txn.accounts[1], whitelisted, Btoi(Txn.application_args[1])),
             Approve()
         ])
 
@@ -246,6 +231,33 @@ def approval():
             Approve()
         ])
 
+    handle_increase_tier = Seq([
+        Assert(
+            And(
+                Global.group_size() == Int(1),
+                basic_checks,
+                Txn.sender() == App.globalGet(manager),
+                Txn.application_args.length() == Int(2)
+            )
+        ),
+        App.globalPut(current_tier, Add(App.globalGet(current_tier), Int(1))),
+        App.globalPut(price, Btoi(Txn.application_args[1])),
+        App.globalPut(is_open, Int(0)),
+        Approve()
+    ])
+
+    handle_open = Seq([
+        Assert(
+            And(
+                Global.group_size() == Int(1),
+                basic_checks,
+                Txn.sender() == App.globalGet(manager),
+            )
+        ),
+        App.globalPut(is_open, Int(1)),
+        Approve()
+    ])
+
 
     program = Cond(
 
@@ -276,8 +288,14 @@ def approval():
                         Txn.application_args[0] == claim, handle_claim
                     ],
                     [
+                        Txn.application_args[0] == increase_tier, handle_increase_tier
+                    ],
+                    [
                         Txn.application_args[0] == redeem, handle_redeem
                     ],
+                    [
+                        Txn.application_args[0] == open_minting, handle_open
+                    ]
     )
 
     return program

@@ -1,5 +1,6 @@
 const { Runtime} = require('@algo-builder/runtime');
 const { types } = require('@algo-builder/web');
+const { ALGORAND_MIN_TX_FEE } = require('algosdk');
 
 const minBalance = BigInt(1e6);
 const managerBalance = BigInt(10e6);
@@ -26,9 +27,9 @@ class Context {
            metaType: types.MetaType.FILE,
             approvalProgramFilename: minter,
             clearProgramFilename: clear,            
-            localInts:3,
-            localBytes:0,
-            globalInts:3,
+            localInts:2,
+            localBytes:1,
+            globalInts:5,
             globalBytes:1,
         }
 
@@ -77,6 +78,10 @@ class Context {
 		_whitelist(this.runtime, manager, addrToWhitelist, this.App.appID);
 	}
 
+    increaseTier(manager) {
+        _increaseTier(this.runtime, manager, this.App.appID);
+    }
+
     setManager(manager, newPermManager) {
         this.optIn(newPermManager);
         _setManager(this.runtime, manager, newPermManager, this.App.appID)
@@ -87,11 +92,15 @@ class Context {
     }
 
     buy(buyer, amount, url, metadata){
-        return _buy(this.runtime, url, metadata, buyer, this.App.appID, amount)
+        return _buy(this.runtime, url, metadata, buyer, this.App.appID, this.App.applicationAccount, amount)
     }
 
-    claim(buyer){
-        return _claim(this.runtime, buyer, this.App.appID)
+    claim(buyer, assetId){
+        return _claim(this.runtime, buyer, this.App.appID, assetId)
+    }
+
+    open(manager){
+        return _open(this.runtime, manager, this.App.appID)
     }
 
 }
@@ -103,7 +112,7 @@ function _whitelist(runtime, manager, addrToWhiteList, appId){
         fromAccount: manager,
         appID: appId,
         payFlags: { totalFee: 1000 },
-        appArgs: ["str:set_whitelist"],
+        appArgs: ["str:set_whitelist", "int:1"],
         accounts: [addrToWhiteList],
     },
 ]);
@@ -138,7 +147,7 @@ function _giveDiscount(runtime, manager, buyerAddress, appId){
 ]);
 }
 
-function _buy(runtime,url, metadata, buyer, appId, amount){
+function _buy(runtime,url, metadata, buyer, appId, appAddr, amount){
     return runtime.executeTx([
     {
         type: types.TransactionType.CallApp,
@@ -152,28 +161,53 @@ function _buy(runtime,url, metadata, buyer, appId, amount){
         type: types.TransactionType.TransferAlgo,
         sign: types.SignType.SecretKey,
         fromAccount: buyer,
-        appID: appId,
+        toAccountAddr: appAddr,
         amountMicroAlgos: amount,
         payFlags: {totalFee: 4000}
      }
     ])
 }
 
-function _claim(runtime, buyer, appId){
+function _claim(runtime, buyer, appId, assetId){
 
-    console.log(buyer.getLocalState(appId, "unclaimed"))
     return runtime.executeTx([
     {
         type: types.TransactionType.CallApp,
         sign: types.SignType.SecretKey,
-        fromAccount: buyer.account,
+        fromAccount: buyer,
         appID: appId,
         payFlags: {totalFee: 1000},
         appArgs: ["str:claim"],
-        foreignAssets: [parseInt(buyer.getLocalState(appId, "unclaimed"))]
+        foreignAssets: [assetId]
     }
         ]
     )
+}
+
+function _increaseTier(runtime, manager, appId){
+    return runtime.executeTx([
+        {
+            type: types.TransactionType.CallApp,
+            sign: types.SignType.SecretKey,
+            fromAccount: manager,
+            appID: appId,
+            payFlags: {totalFee: 1000},
+            appArgs: ["str:increase_tier", "int:100000"]
+        }
+    ])
+}
+
+function _open(runtime, manager, appId) {
+    return runtime.executeTx([
+        {
+            type: types.TransactionType.CallApp,
+            sign: types.SignType.SecretKey,
+            fromAccount: manager,
+            appID: appId,
+            payFlags: {totalFee: 1000},
+            appArgs: ["str:open"]
+        }
+    ])
 }
 
 

@@ -1,17 +1,18 @@
 filename: dino_minter.py
-timestamp: 1656082053
-compiled: BiADAQAEJgYHbWFuYWdlcgxoYXNfZGlzY291bnQJdW5jbGFpbWVkC3doaXRlbGlzdGVkD3doaXRlbGlzdF9jb3VudAxtaW50ZWRfdW5pdHMxGCMSQAH4MRkiEkABxDEZJBJAAbAxGYEFEkABmzYaAIANc2V0X3doaXRlbGlzdBJAAUY2GgCAC3NldF9tYW5hZ2VyEkABCTYaAIADYnV5EkAAhTYaAIAFY2xhaW0SQABlNhoAgA1naXZlX2Rpc2NvdW50EkAAJTYaAIAGcmVkZWVtEkAAAQAxAChkEjIEIhIQRDEANhoBiAHlIkMyBCISMR0iEhAxIDIDEjEJMgMSEDEVMgMSEBAxAChkEhBENhwBKSJmIkM2MAAxACpiEkQxACpiiAGSIkMyBIECEkQzAQCIAbU1ADMBECISMwEAMwAAEhAzAQg0AA8QMwEHMgoSEDMBACtiEEQ3ABoBNwAaAogBGjMAACo0AWaIAQczAQg0ADIACA1AABUzAQApYiISQAACIkMzAQApI2ZC//UzAQAzAQg0AAkyAAmIATJC/9kyBCISMR0iEhAxIDIDEjEJMgMSEDEVMgMSEBAxAChkEhBEKDYcAWciQzIEIhIxHSISEDEgMgMSMQkyAxIQMRUyAxIQEDEAKGQSEEQ2HAErYiMSQAAINhwBKyJmIkMnBCcEZCIIZ0L/7TEAKGQSMgQiEhBEIkMxAChkEjIEIhIQRCJDMgQiEjEbIxIQMSAyAxIxCTIDEhAxFTIDEhAQRDEAKyNmMQApI2YxACojZiJDMgQiEjEgMgMSMQkyAxIQMRUyAxIQEEQnBCNnKDEAZycFI2ciQycFJwVkIghniTUDNQKxgQOyECKyIiOyI4ADRFlOsiWABER5bm+yJiOyJDIKsiwoZLIpNAKyJzQDsgUyALIBs7Q8NQGJNQSxJLIQNASyESKyEjIKshMxALIUs4k1BjUFsSKyEDQGsggyCrIANAWyBzIAsgGziTUHgZBOgegHCYk=
-compiledHash: RHA3THGHYPNORBN6GHPLGDODUN7TOP53CZF3DB5PAEPS37AS57AXXNXJPE
-srcHash: 2186014064
+timestamp: 1657886571
+compiled: BiAEAQACBCYIB21hbmFnZXIJdW5jbGFpbWVkC3doaXRlbGlzdGVkDGN1cnJlbnRfdGllcgVwcmljZQ93aGl0ZWxpc3RfY291bnQMbWludGVkX3VuaXRzB2lzX29wZW4xGCMSQAINMRkiEkAB3jEZJRJAAcoxGYEFEkABtTYaAIANc2V0X3doaXRlbGlzdBJAAVg2GgCAC3NldF9tYW5hZ2VyEkABGzYaAIADYnV5EkAAlTYaAIAFY2xhaW0SQABwNhoAgA1pbmNyZWFzZV90aWVyEkAAJTYaAIAGcmVkZWVtEkAAAQAxAChkEjIEIhIQRDEANhoBiAIZIkMyBCISMSAyAxIxCTIDEhAxFTIDEhAQMQAoZBIQMRskEhBEKytkIghnJwQ2GgEXZycHI2ciQzYwADEAKWISRDEAKWKIAbsxACkjZiJDMgQkEkQzAQCIAUk1ADMBECISMwEAMwAAEhAzAQg0AA8QMwEHMgoSEDMBACliIxIQRCcHZCMSQAA1NwAaATcAGgKIATUzAAApNAFmiAEiMwEINAAyAAgNQAACIkMzAQAzAQg0AAkyAAmIAWBC/+wzAQAqYitkEkRC/78yBCISMR0iEhAxIDIDEjEJMgMSEDEVMgMSEBAxAChkEhBEKDYcAWciQzIEIhIxHSISEDEbJBIQMSAyAxIxCTIDEhAxFTIDEhAQMQAoZBIQRDYcASpiIxJAAAs2HAEqNhoBF2YiQycFJwVkIghnQv/qMQAoZBIyBCISEEQiQzEAKGQSMgQiEhBEIkMyBCISMRsjEhAxIDIDEjEJMgMSEDEVMgMSEBBEMQAqI2YxACkjZiJDMgQiEjEgMgMSMQkyAxIQMRUyAxIQEEQnBSNnKDEAZycGI2crI2ciQzUCNAIqYiMNQAAGJwRkQgAKJwRkJwRkgQoKCYknBicGZCIIZ4k1BDUDsYEDshAisiIjsiOAA0RZTrIlgAREeW5vsiYjsiQyCrIsKGSyKTQDsic0BLIFMgCyAbO0PDUBiTUFsSWyEDQFshEishIyCrITMQCyFLOJNQc1BrEishA0B7IIMgqyADQGsgcyALIBs4k=
+compiledHash: UTJOWV26H6SPHXELO4Y3IOH45QTQC2NPFFTRB6B7YIHITDGNSBPFCM5PDA
+srcHash: 973027299
 base64ToBytes:
   - 6
   - 32
-  - 3
+  - 4
   - 1
   - 0
+  - 2
   - 4
   - 38
-  - 6
+  - 8
   - 7
   - 109
   - 97
@@ -20,19 +21,6 @@ base64ToBytes:
   - 103
   - 101
   - 114
-  - 12
-  - 104
-  - 97
-  - 115
-  - 95
-  - 100
-  - 105
-  - 115
-  - 99
-  - 111
-  - 117
-  - 110
-  - 116
   - 9
   - 117
   - 110
@@ -55,6 +43,25 @@ base64ToBytes:
   - 116
   - 101
   - 100
+  - 12
+  - 99
+  - 117
+  - 114
+  - 114
+  - 101
+  - 110
+  - 116
+  - 95
+  - 116
+  - 105
+  - 101
+  - 114
+  - 5
+  - 112
+  - 114
+  - 105
+  - 99
+  - 101
   - 15
   - 119
   - 104
@@ -84,27 +91,35 @@ base64ToBytes:
   - 105
   - 116
   - 115
+  - 7
+  - 105
+  - 115
+  - 95
+  - 111
+  - 112
+  - 101
+  - 110
   - 49
   - 24
   - 35
   - 18
   - 64
-  - 1
-  - 248
+  - 2
+  - 13
   - 49
   - 25
   - 34
   - 18
   - 64
   - 1
-  - 196
+  - 222
   - 49
   - 25
-  - 36
+  - 37
   - 18
   - 64
   - 1
-  - 176
+  - 202
   - 49
   - 25
   - 129
@@ -112,7 +127,7 @@ base64ToBytes:
   - 18
   - 64
   - 1
-  - 155
+  - 181
   - 54
   - 26
   - 0
@@ -134,7 +149,7 @@ base64ToBytes:
   - 18
   - 64
   - 1
-  - 70
+  - 88
   - 54
   - 26
   - 0
@@ -154,7 +169,7 @@ base64ToBytes:
   - 18
   - 64
   - 1
-  - 9
+  - 27
   - 54
   - 26
   - 0
@@ -166,7 +181,7 @@ base64ToBytes:
   - 18
   - 64
   - 0
-  - 133
+  - 149
   - 54
   - 26
   - 0
@@ -180,25 +195,25 @@ base64ToBytes:
   - 18
   - 64
   - 0
-  - 101
+  - 112
   - 54
   - 26
   - 0
   - 128
   - 13
-  - 103
   - 105
-  - 118
+  - 110
+  - 99
+  - 114
+  - 101
+  - 97
+  - 115
   - 101
   - 95
-  - 100
-  - 105
-  - 115
-  - 99
-  - 111
-  - 117
-  - 110
   - 116
+  - 105
+  - 101
+  - 114
   - 18
   - 64
   - 0
@@ -236,19 +251,14 @@ base64ToBytes:
   - 26
   - 1
   - 136
-  - 1
-  - 229
+  - 2
+  - 25
   - 34
   - 67
   - 50
   - 4
   - 34
   - 18
-  - 49
-  - 29
-  - 34
-  - 18
-  - 16
   - 49
   - 32
   - 50
@@ -273,13 +283,29 @@ base64ToBytes:
   - 100
   - 18
   - 16
+  - 49
+  - 27
+  - 36
+  - 18
+  - 16
   - 68
-  - 54
-  - 28
-  - 1
-  - 41
+  - 43
+  - 43
+  - 100
   - 34
-  - 102
+  - 8
+  - 103
+  - 39
+  - 4
+  - 54
+  - 26
+  - 1
+  - 23
+  - 103
+  - 39
+  - 7
+  - 35
+  - 103
   - 34
   - 67
   - 54
@@ -287,23 +313,27 @@ base64ToBytes:
   - 0
   - 49
   - 0
-  - 42
+  - 41
   - 98
   - 18
   - 68
   - 49
   - 0
-  - 42
+  - 41
   - 98
   - 136
   - 1
-  - 146
+  - 187
+  - 49
+  - 0
+  - 41
+  - 35
+  - 102
   - 34
   - 67
   - 50
   - 4
-  - 129
-  - 2
+  - 36
   - 18
   - 68
   - 51
@@ -311,7 +341,7 @@ base64ToBytes:
   - 0
   - 136
   - 1
-  - 181
+  - 73
   - 53
   - 0
   - 51
@@ -344,10 +374,20 @@ base64ToBytes:
   - 51
   - 1
   - 0
-  - 43
+  - 41
   - 98
+  - 35
+  - 18
   - 16
   - 68
+  - 39
+  - 7
+  - 100
+  - 35
+  - 18
+  - 64
+  - 0
+  - 53
   - 55
   - 0
   - 26
@@ -358,17 +398,17 @@ base64ToBytes:
   - 2
   - 136
   - 1
-  - 26
+  - 53
   - 51
   - 0
   - 0
-  - 42
+  - 41
   - 52
   - 1
   - 102
   - 136
   - 1
-  - 7
+  - 34
   - 51
   - 1
   - 8
@@ -380,28 +420,9 @@ base64ToBytes:
   - 13
   - 64
   - 0
-  - 21
-  - 51
-  - 1
-  - 0
-  - 41
-  - 98
-  - 34
-  - 18
-  - 64
-  - 0
   - 2
   - 34
   - 67
-  - 51
-  - 1
-  - 0
-  - 41
-  - 35
-  - 102
-  - 66
-  - 255
-  - 245
   - 51
   - 1
   - 0
@@ -416,10 +437,22 @@ base64ToBytes:
   - 9
   - 136
   - 1
-  - 50
+  - 96
   - 66
   - 255
-  - 217
+  - 236
+  - 51
+  - 1
+  - 0
+  - 42
+  - 98
+  - 43
+  - 100
+  - 18
+  - 68
+  - 66
+  - 255
+  - 191
   - 50
   - 4
   - 34
@@ -471,6 +504,11 @@ base64ToBytes:
   - 18
   - 16
   - 49
+  - 27
+  - 36
+  - 18
+  - 16
+  - 49
   - 32
   - 50
   - 3
@@ -498,32 +536,35 @@ base64ToBytes:
   - 54
   - 28
   - 1
-  - 43
+  - 42
   - 98
   - 35
   - 18
   - 64
   - 0
-  - 8
+  - 11
   - 54
   - 28
   - 1
-  - 43
-  - 34
+  - 42
+  - 54
+  - 26
+  - 1
+  - 23
   - 102
   - 34
   - 67
   - 39
-  - 4
+  - 5
   - 39
-  - 4
+  - 5
   - 100
   - 34
   - 8
   - 103
   - 66
   - 255
-  - 237
+  - 234
   - 49
   - 0
   - 40
@@ -580,17 +621,12 @@ base64ToBytes:
   - 68
   - 49
   - 0
-  - 43
+  - 42
   - 35
   - 102
   - 49
   - 0
   - 41
-  - 35
-  - 102
-  - 49
-  - 0
-  - 42
   - 35
   - 102
   - 34
@@ -619,7 +655,7 @@ base64ToBytes:
   - 16
   - 68
   - 39
-  - 4
+  - 5
   - 35
   - 103
   - 40
@@ -627,24 +663,55 @@ base64ToBytes:
   - 0
   - 103
   - 39
-  - 5
+  - 6
+  - 35
+  - 103
+  - 43
   - 35
   - 103
   - 34
   - 67
+  - 53
+  - 2
+  - 52
+  - 2
+  - 42
+  - 98
+  - 35
+  - 13
+  - 64
+  - 0
+  - 6
   - 39
-  - 5
+  - 4
+  - 100
+  - 66
+  - 0
+  - 10
   - 39
-  - 5
+  - 4
+  - 100
+  - 39
+  - 4
+  - 100
+  - 129
+  - 10
+  - 10
+  - 9
+  - 137
+  - 39
+  - 6
+  - 39
+  - 6
   - 100
   - 34
   - 8
   - 103
   - 137
   - 53
-  - 3
+  - 4
   - 53
-  - 2
+  - 3
   - 177
   - 129
   - 3
@@ -683,11 +750,11 @@ base64ToBytes:
   - 178
   - 41
   - 52
-  - 2
+  - 3
   - 178
   - 39
   - 52
-  - 3
+  - 4
   - 178
   - 5
   - 50
@@ -701,13 +768,13 @@ base64ToBytes:
   - 1
   - 137
   - 53
-  - 4
+  - 5
   - 177
-  - 36
+  - 37
   - 178
   - 16
   - 52
-  - 4
+  - 5
   - 178
   - 17
   - 34
@@ -724,15 +791,15 @@ base64ToBytes:
   - 179
   - 137
   - 53
-  - 6
+  - 7
   - 53
-  - 5
+  - 6
   - 177
   - 34
   - 178
   - 16
   - 52
-  - 6
+  - 7
   - 178
   - 8
   - 50
@@ -740,7 +807,7 @@ base64ToBytes:
   - 178
   - 0
   - 52
-  - 5
+  - 6
   - 178
   - 7
   - 50
@@ -748,16 +815,6 @@ base64ToBytes:
   - 178
   - 1
   - 179
-  - 137
-  - 53
-  - 7
-  - 129
-  - 144
-  - 78
-  - 129
-  - 232
-  - 7
-  - 9
   - 137
 tealCode: |
   #pragma version 6
@@ -794,7 +851,7 @@ tealCode: |
   ==
   bnz main_l13
   txna ApplicationArgs 0
-  byte "give_discount"
+  byte "increase_tier"
   ==
   bnz main_l12
   txna ApplicationArgs 0
@@ -814,17 +871,13 @@ tealCode: |
   assert
   txn Sender
   txna ApplicationArgs 1
-  callsub sendpayment_3
+  callsub sendpayment_4
   int 1
   return
   main_l12:
   global GroupSize
   int 1
   ==
-  txn NumAccounts
-  int 1
-  ==
-  &&
   txn RekeyTo
   global ZeroAddress
   ==
@@ -842,11 +895,24 @@ tealCode: |
   app_global_get
   ==
   &&
+  txn NumAppArgs
+  int 2
+  ==
+  &&
   assert
-  txna Accounts 1
-  byte "has_discount"
+  byte "current_tier"
+  byte "current_tier"
+  app_global_get
   int 1
-  app_local_put
+  +
+  app_global_put
+  byte "price"
+  txna ApplicationArgs 1
+  btoi
+  app_global_put
+  byte "is_open"
+  int 0
+  app_global_put
   int 1
   return
   main_l13:
@@ -859,7 +925,11 @@ tealCode: |
   txn Sender
   byte "unclaimed"
   app_local_get
-  callsub transferasset_2
+  callsub transferasset_3
+  txn Sender
+  byte "unclaimed"
+  int 0
+  app_local_put
   int 1
   return
   main_l14:
@@ -868,7 +938,7 @@ tealCode: |
   ==
   assert
   gtxn 1 Sender
-  callsub computetotalprice_4
+  callsub computetotalprice_0
   store 0
   gtxn 1 TypeEnum
   int pay
@@ -886,48 +956,52 @@ tealCode: |
   ==
   &&
   gtxn 1 Sender
-  byte "whitelisted"
+  byte "unclaimed"
   app_local_get
+  int 0
+  ==
   &&
   assert
+  byte "is_open"
+  app_global_get
+  int 0
+  ==
+  bnz main_l18
+  main_l15:
   gtxna 0 ApplicationArgs 1
   gtxna 0 ApplicationArgs 2
-  callsub executeminttx_1
+  callsub executeminttx_2
   gtxn 0 Sender
   byte "unclaimed"
   load 1
   app_local_put
-  callsub increasemintedunits_0
+  callsub increasemintedunits_1
   gtxn 1 Amount
   load 0
   global MinTxnFee
   +
   >
-  bnz main_l18
-  main_l15:
-  gtxn 1 Sender
-  byte "has_discount"
-  app_local_get
-  int 1
-  ==
   bnz main_l17
   main_l16:
   int 1
   return
   main_l17:
   gtxn 1 Sender
-  byte "has_discount"
-  int 0
-  app_local_put
-  b main_l16
-  main_l18:
-  gtxn 1 Sender
   gtxn 1 Amount
   load 0
   -
   global MinTxnFee
   -
-  callsub sendpayment_3
+  callsub sendpayment_4
+  b main_l16
+  main_l18:
+  gtxn 1 Sender
+  byte "whitelisted"
+  app_local_get
+  byte "current_tier"
+  app_global_get
+  ==
+  assert
   b main_l15
   main_l19:
   global GroupSize
@@ -968,6 +1042,10 @@ tealCode: |
   int 1
   ==
   &&
+  txn NumAppArgs
+  int 2
+  ==
+  &&
   txn RekeyTo
   global ZeroAddress
   ==
@@ -995,7 +1073,8 @@ tealCode: |
   main_l21:
   txna Accounts 1
   byte "whitelisted"
-  int 1
+  txna ApplicationArgs 1
+  btoi
   app_local_put
   int 1
   return
@@ -1057,10 +1136,6 @@ tealCode: |
   int 0
   app_local_put
   txn Sender
-  byte "has_discount"
-  int 0
-  app_local_put
-  txn Sender
   byte "unclaimed"
   int 0
   app_local_put
@@ -1092,11 +1167,37 @@ tealCode: |
   byte "minted_units"
   int 0
   app_global_put
+  byte "current_tier"
+  int 0
+  app_global_put
   int 1
   return
 
+  // compute_total_price
+  computetotalprice_0:
+  store 2
+  load 2
+  byte "whitelisted"
+  app_local_get
+  int 0
+  >
+  bnz computetotalprice_0_l2
+  byte "price"
+  app_global_get
+  b computetotalprice_0_l3
+  computetotalprice_0_l2:
+  byte "price"
+  app_global_get
+  byte "price"
+  app_global_get
+  int 10
+  /
+  -
+  computetotalprice_0_l3:
+  retsub
+
   // increase_minted_units
-  increasemintedunits_0:
+  increasemintedunits_1:
   byte "minted_units"
   byte "minted_units"
   app_global_get
@@ -1106,9 +1207,9 @@ tealCode: |
   retsub
 
   // execute_mint_tx
-  executeminttx_1:
+  executeminttx_2:
+  store 4
   store 3
-  store 2
   itxn_begin
   int acfg
   itxn_field TypeEnum
@@ -1127,9 +1228,9 @@ tealCode: |
   byte "manager"
   app_global_get
   itxn_field ConfigAssetManager
-  load 2
-  itxn_field ConfigAssetURL
   load 3
+  itxn_field ConfigAssetURL
+  load 4
   itxn_field Note
   global MinTxnFee
   itxn_field Fee
@@ -1139,12 +1240,12 @@ tealCode: |
   retsub
 
   // transfer_asset
-  transferasset_2:
-  store 4
+  transferasset_3:
+  store 5
   itxn_begin
   int axfer
   itxn_field TypeEnum
-  load 4
+  load 5
   itxn_field XferAsset
   int 1
   itxn_field AssetAmount
@@ -1156,28 +1257,20 @@ tealCode: |
   retsub
 
   // send_payment
-  sendpayment_3:
+  sendpayment_4:
+  store 7
   store 6
-  store 5
   itxn_begin
   int pay
   itxn_field TypeEnum
-  load 6
+  load 7
   itxn_field Amount
   global CurrentApplicationAddress
   itxn_field Sender
-  load 5
+  load 6
   itxn_field Receiver
   global MinTxnFee
   itxn_field Fee
   itxn_submit
-  retsub
-
-  // compute_total_price
-  computetotalprice_4:
-  store 7
-  int 10000
-  int 1000
-  -
   retsub
 scParams: {}
