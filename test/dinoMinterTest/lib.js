@@ -27,9 +27,9 @@ class Context {
            metaType: types.MetaType.FILE,
             approvalProgramFilename: minter,
             clearProgramFilename: clear,            
-            localInts:2,
-            localBytes:1,
-            globalInts:5,
+            localInts:4,
+            localBytes:0,
+            globalInts:9,
             globalBytes:1,
         }
 
@@ -91,8 +91,8 @@ class Context {
         _giveDiscount(this.runtime, manager, buyerAddress, this.App.appID)
     }
 
-    buy(buyer, amount, url, metadata){
-        return _buy(this.runtime, url, metadata, buyer, this.App.appID, this.App.applicationAccount, amount)
+    buy(buyer, manager, amount, url, metadata){
+        return _buy(this.runtime, url, metadata, buyer, manager, this.App.appID, this.App.applicationAccount, amount)
     }
 
     claim(buyer, assetId){
@@ -147,15 +147,16 @@ function _giveDiscount(runtime, manager, buyerAddress, appId){
 ]);
 }
 
-function _buy(runtime,url, metadata, buyer, appId, appAddr, amount){
+function _buy(runtime,url, metadata, buyer, manager, appId, appAddr, amount){
     return runtime.executeTx([
     {
         type: types.TransactionType.CallApp,
         sign: types.SignType.SecretKey,
-        fromAccount: buyer,
+        fromAccount: manager,
         appID: appId,
         payFlags: {totalFee: 0},
         appArgs: ["str:buy",url, metadata],
+        accounts: [buyer.addr]
     },
     {
         type: types.TransactionType.TransferAlgo,
@@ -192,7 +193,7 @@ function _increaseTier(runtime, manager, appId){
             fromAccount: manager,
             appID: appId,
             payFlags: {totalFee: 1000},
-            appArgs: ["str:increase_tier", "int:100000"]
+            appArgs: ["str:increase_tier", "int:100000", "int:250", "int:25"]
         }
     ])
 }

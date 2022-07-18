@@ -92,7 +92,7 @@ describe('dinoMinter test', () => {
             );
 
         ctx.increaseTier(managerAcct.account)
-        ctx.buy(buyer1.account, 150000, "str:wegabibou", "str:belandijuliana")
+        ctx.buy(buyer1.account, managerAcct.account, 150000, "str:wegabibou", "str:belandijuliana")
         ctx.syncAccounts();
         assetId = parseInt(ctx.buyer1.getLocalState(ctx.App.appID, "unclaimed"))
         ctx.runtime.optIntoASA(assetId, buyer1.address, {})
@@ -105,9 +105,15 @@ describe('dinoMinter test', () => {
 
     it('should NOT let unwhitelisted user purchase token', () => {
         ctx.optIn(ctx.buyer2.address);
+        const managerAddr = encodeAddress(
+            ctx.runtime.getGlobalState(ctx.App.appID, "manager")
+        );
+
+        const managerAcct = ctx.getAccount(managerAddr);
+
 
         assert.throws( () => {
-            ctx.buy(buyer2.account, 150000, "str:nope" , "str: nopenope")
+            ctx.buy(buyer2.account, managerAcct.account, 150000, "str:nope" , "str: nopenope")
         })
     })
 
@@ -121,7 +127,7 @@ describe('dinoMinter test', () => {
 
         ctx.open(managerAcct.account)
 
-        ctx.buy(buyer2.account, 150000, "str:belandi" , "str: Ragassi")
+        ctx.buy(buyer2.account, managerAcct.account, 150000, "str:belandi" , "str: Ragassi")
         ctx.syncAccounts();
         assetId = parseInt(ctx.buyer2.getLocalState(ctx.App.appID, "unclaimed"))
         ctx.runtime.optIntoASA(assetId, buyer2.address, {})
@@ -149,7 +155,7 @@ describe('dinoMinter test', () => {
         let initialBalance = ctx.buyer1.balance()
         let price = ctx.runtime.getGlobalState(ctx.App.appID, "price")
         let discount = price/10n
-        ctx.buy(buyer1.account, price + BigInt(100000), "str:SPLAAASH", "str:{il gabibbo}")
+        ctx.buy(buyer1.account, managerAcct.account, price + BigInt(100000), "str:SPLAAASH", "str:{il gabibbo}")
 
         ctx.syncAccounts()
         let totalFees = 5000n
