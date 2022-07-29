@@ -140,11 +140,6 @@ def approval():
         Txn.asset_close_to() == Global.zero_address(),
     )
     
-    _checks = And(
-        basic_checks,
-    )
-
-
     on_deploy = Seq([
         Assert(
             And(
